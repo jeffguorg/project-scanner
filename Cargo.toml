@@ -1,0 +1,17 @@
+[workspace]
+resolver = "2"
+members = ["crates/kernel", "crates/cli"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+rust-version = "1.80"
+
+[workspace.dependencies]
+project-scanner-kernel = { path = "crates/kernel" }
+anyhow = "1"
+
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+schemars = "1"

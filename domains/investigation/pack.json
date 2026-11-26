@@ -1,0 +1,27 @@
+{
+  "domain": "investigation",
+  "description": "调研一个问题的根因：把可能的原因写成假设，用源码证据证实或否定。",
+  "sectionKinds": ["component", "hypothesis-group", "context"],
+  "findingKinds": ["hypothesis", "root-cause", "observation"],
+  "pathRequiredKinds": ["root-cause"],
+  "pathRoles": ["trigger", "state", "cause", "effect"],
+  "originRoles": ["trigger"],
+  "outcomeRoles": ["effect"],
+  "verdicts": ["validated", "refuted", "deferred"],
+  "severities": [],
+  "confidences": ["high", "medium", "low"],
+  "dispositions": ["no_issue", "not_applicable", "deferred"],
+  "defaultExclusions": [
+    "node_modules/", "vendor/", "dist/", "build/", "out/", "target/", ".git/", ".svn/", ".hg/",
+    "__pycache__/", ".venv/", "venv/", ".tox/", ".mypy_cache/", ".next/", ".nuxt/", "coverage/",
+    ".cache/", "tmp/", "temp/", "logs/", ".idea/", ".vscode/"
+  ],
+  "policyFile": null,
+  "anchorNaming": "小写字母数字、连字符分段，描述这条假设或根因，如 coupon-double-apply；增量时以上次的标签为准",
+  "method": {
+    "planning": "method/planning.md",
+    "discovery": "method/discovery.md",
+    "validation": "method/validation.md",
+    "analyze_full_path": "method/path.md"
+  }
+}

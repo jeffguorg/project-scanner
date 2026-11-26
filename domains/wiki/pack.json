@@ -1,0 +1,27 @@
+{
+  "domain": "wiki",
+  "description": "生成项目文档：首页加每个板块一页，每句描述都有源码定位。",
+  "sectionKinds": ["module", "layer", "entry", "cross-cutting"],
+  "findingKinds": ["description", "flow", "invariant", "convention"],
+  "pathRequiredKinds": ["flow"],
+  "pathRoles": ["entry", "handler", "service", "store"],
+  "originRoles": ["entry"],
+  "outcomeRoles": ["store"],
+  "verdicts": ["validated", "refuted", "deferred"],
+  "severities": [],
+  "confidences": ["high", "medium", "low"],
+  "dispositions": ["no_issue", "not_applicable", "deferred"],
+  "defaultExclusions": [
+    "node_modules/", "vendor/", "dist/", "build/", "out/", "target/", ".git/", ".svn/", ".hg/",
+    "__pycache__/", ".venv/", "venv/", ".tox/", ".mypy_cache/", ".next/", ".nuxt/", "coverage/",
+    ".cache/", "tmp/", "temp/", "logs/", ".idea/", ".vscode/"
+  ],
+  "policyFile": null,
+  "anchorNaming": "小写字母数字、连字符分段，描述这段代码的作用，如 checkout-total-calculation；增量时以上次的标签为准",
+  "method": {
+    "planning": "method/planning.md",
+    "discovery": "method/discovery.md",
+    "validation": "method/validation.md",
+    "analyze_full_path": "method/path.md"
+  }
+}

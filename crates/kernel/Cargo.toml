@@ -1,0 +1,20 @@
+[package]
+name = "project-scanner-kernel"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+chrono = { version = "0.4", features = ["serde", "clock"] }
+regex = "1"
+sha2 = "0.10"
+hex = "0.4"
+uuid = { version = "1", features = ["v4"] }
+rustix = { version = "1", features = ["fs"] }
+minijinja = { version = "3", features = ["multi_template", "fuel", "serde"] }
+serde_yaml_ng = "0.10"
+include_dir = "0.7"

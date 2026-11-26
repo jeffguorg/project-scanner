@@ -1,0 +1,28 @@
+{
+  "domain": "security",
+  "description": "找可利用的安全问题：远程代码执行、越权、信息泄露、密钥、依赖与配置。",
+  "sectionKinds": ["attack-surface", "baseline"],
+  "findingKinds": ["injection", "authorization", "disclosure", "rce", "secret", "dependency", "config"],
+  "pathRequiredKinds": ["injection", "authorization", "rce", "disclosure"],
+  "pathRoles": ["source", "transform", "control", "sink"],
+  "originRoles": ["source"],
+  "outcomeRoles": ["sink"],
+  "verdicts": ["validated", "refuted", "deferred"],
+  "severities": ["critical", "high", "medium", "low", "informational"],
+  "confidences": ["high", "medium", "low"],
+  "dispositions": ["no_issue", "not_applicable", "deferred"],
+  "defaultExclusions": [
+    "node_modules/", "vendor/", "dist/", "build/", "out/", "target/", ".git/", ".svn/", ".hg/",
+    "__pycache__/", ".venv/", "venv/", ".tox/", ".mypy_cache/", ".next/", ".nuxt/", "coverage/",
+    ".cache/", "tmp/", "temp/", "logs/", ".idea/", ".vscode/"
+  ],
+  "policyFile": "SECURITY.md",
+  "anchorNaming": "小写字母数字、连字符分段，描述失效之处的作用，如 archive-extract-without-containment；同一处的兄弟实例用 instance 区分",
+  "method": {
+    "planning": "method/planning.md",
+    "discovery": "method/discovery.md",
+    "validation": "method/validation.md",
+    "analyze_full_path": "method/path.md"
+  },
+  "references": ["method/severity-rubric.md"]
+}
